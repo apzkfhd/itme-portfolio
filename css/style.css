@@ -513,6 +513,7 @@ section.show .branding-img {
   margin-top: 7.2rem;
   padding: 0 5rem;
   display: flex;
+  align-items: flex-start;
   flex-wrap: wrap;
   width: 90%;
   height: 60rem;
@@ -521,27 +522,69 @@ section.show .branding-img {
   /* transform: scaleX(-1); */
 }
 .publisher-card {
+  position: relative;
+  width: 38.5rem;
+  height: 44.8rem;
+  flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
+
   border-radius: 2rem;
   overflow: hidden;
   border: 1px solid #fff;
-  width: 38.5rem;
-  height: 44.8rem;
   background-color: rgba(64, 64, 64, 0.3);
+
+  perspective: 1000px; /* 3D 효과 */
 }
-.publisher-card .num-card {
+
+/* 앞/뒤 카드 공통 */
+.publisher-card .num-card,
+.publisher-card .card {
+  position: absolute;
   width: 18.7rem;
   height: 20rem;
-  /* transform: scaleX(-1); */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backface-visibility: hidden;
+  transition:
+    transform 0.6s ease,
+    opacity 0.6s ease;
 }
+
+/* 앞면 (기본) */
+.publisher-card .num-card {
+  transform: rotateY(0deg);
+}
+
+/* 이미지 애니메이션 유지 */
 .publisher-card .num-card img {
   width: 100%;
   height: 100%;
   object-fit: contain;
   animation: floatBounce 2s ease-in-out infinite;
 }
+
+/* 뒷면 (숨김 상태) */
+.publisher-card .card {
+  transform: rotateY(180deg);
+  opacity: 0;
+  flex-direction: column;
+}
+
+/* hover 시 뒤집기 */
+.publisher-card:hover .num-card {
+  transform: rotateY(180deg);
+  opacity: 0;
+}
+
+.publisher-card:hover .card {
+  transform: rotateY(360deg); /* 또는 0deg */
+  opacity: 1;
+}
+
+/* 떠오르는 애니메이션 */
 @keyframes floatBounce {
   0%,
   100% {
@@ -556,17 +599,6 @@ section.show .branding-img {
   80% {
     transform: translateY(-4px);
   }
-}
-.publisher-card .card {
-  display: none;
-}
-.publisher-card:hover .num-card {
-  display: none;
-}
-.publisher-card:hover .card {
-  display: flex;
-  flex-direction: column;
-  /* transform: scaleX(1); */
 }
 .publisher-card .card .card-img {
   width: 38.5rem;
