@@ -517,7 +517,6 @@ section.show .branding-img {
   width: 90%;
   height: 60rem;
   gap: 3.2rem;
-  justify-content: space-between;
   overflow-y: auto;
   /* transform: scaleX(-1); */
 }
