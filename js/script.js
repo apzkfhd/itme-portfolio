@@ -77,6 +77,16 @@ const publisherList = [
     icon: "fa-user",
     date: "2026.03.23. ~ 2026.04.??.",
   },
+  {
+    numImg: "assets/images/publisher-5.png",
+    link: "https://apzkfhd.github.io/online-lecture-platform/",
+    img: "assets/images/publisher-project-5.png",
+    top: "스터디",
+    title: "온라인 강의 플랫폼",
+    type: "스터디",
+    icon: "fa-users",
+    date: "2026.01.28. ~ 2026.02.11.",
+  },
 ];
 
 // DOM 로드 후 실행 (중요)
