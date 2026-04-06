@@ -1,0 +1,1294 @@
+/* -----폰트----- */
+
+@font-face {
+  font-family: "SB-Aggro-L";
+  src: url("../fonts/SB-Aggro-L.TTF");
+}
+
+@font-face {
+  font-family: "SB-Aggro-M";
+  src: url("../fonts/SB-Aggro-M.TTF");
+}
+
+@font-face {
+  font-family: "SB-Aggro-B";
+  src: url("../fonts/SB-Aggro-B.TTF");
+}
+
+@font-face {
+  font-family: "Paperlogy-T";
+  src: url("../fonts/Paperlogy-1Thin.ttf");
+}
+
+@font-face {
+  font-family: "Paperlogy-EL";
+  src: url("../fonts/Paperlogy-2ExtraLight.ttf");
+}
+
+@font-face {
+  font-family: "Paperlogy-L";
+  src: url("../fonts/Paperlogy-3Light.ttf");
+}
+
+@font-face {
+  font-family: "Paperlogy-R";
+  src: url("../fonts/Paperlogy-4Regular.ttf");
+}
+
+@font-face {
+  font-family: "Paperlogy-M";
+  src: url("../fonts/Paperlogy-5Medium.ttf");
+}
+
+@font-face {
+  font-family: "Paperlogy-SB";
+  src: url("../fonts/Paperlogy-6SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "Paperlogy-B";
+  src: url("../fonts/Paperlogy-7Bold.ttf");
+}
+
+@font-face {
+  font-family: "Paperlogy-EB";
+  src: url("../fonts/Paperlogy-8ExtraBold.ttf");
+}
+
+@font-face {
+  font-family: "Paperlogy-BLACK";
+  src: url("../fonts/Paperlogy-9Black.ttf");
+}
+/* -----폰트----- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  /* scroll-behavior: smooth; */
+  font-size: 62.5%;
+  overflow-y: scroll;
+}
+::-webkit-scrollbar {
+  width: 0.8rem;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #51a2ff, #ad5cff);
+  border-radius: 1rem;
+}
+
+.publisher-wrap::-webkit-scrollbar-track {
+  background: #222;
+  border-radius: 10px;
+}
+
+body {
+  font-family: "Paperlogy-L";
+  background-color: #000;
+  color: #fff;
+  font-size: 1.6rem;
+  font-style: normal;
+  line-height: 1.5;
+  font-optical-sizing: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+ul,
+li {
+  list-style: none;
+}
+a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+}
+img {
+  border: 0;
+  vertical-align: middle;
+}
+button {
+  border: none;
+  background: none;
+  color: #fff;
+  cursor: pointer;
+}
+/*  */
+
+section .title,
+section .info,
+section .publisher-card,
+section .app-wrap,
+section .wrap-info,
+section .branding-img {
+  opacity: 0;
+  transform: translateY(40px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+
+/* 등장 */
+section.show .title {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* content 늦게 */
+section.show .info,
+section.show .publisher-card,
+section.show .app-wrap,
+section.show .wrap-info,
+section.show .branding-img {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.3s;
+}
+/*  */
+.container {
+  width: 100%;
+  margin-top: 13rem;
+  /* overflow: hidden; */
+}
+.inner {
+  width: 100%;
+  max-width: 176rem;
+  padding: 0;
+  margin: 0 auto;
+}
+.item {
+  height: 100vh;
+}
+/*  */
+
+/* header */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  backdrop-filter: blur(8px);
+  /* box-shadow: 0 0.4rem 4.8rem #51a2ff; */
+}
+.header .top {
+  width: 100%;
+  background-color: #10192d;
+  border-bottom: 0.2rem solid #1d293d;
+}
+.header .top .inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2rem;
+}
+.header .top .inner .left,
+.header .top .inner .center,
+.header .top .inner .right {
+  font-size: 1.8rem;
+  font-family: "Paperlogy-B";
+}
+.header .nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(1, 1, 1, 1);
+  backdrop-filter: blur(8px);
+}
+.header .nav .inner {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.6rem;
+  padding: 1.6rem 2rem;
+}
+.header .nav .inner li a {
+  width: 100%;
+  font-family: "Paperlogy-B";
+  padding: 0.8rem 1.6rem;
+  border-radius: 1.2rem;
+  border: 0.1rem solid #fff;
+  letter-spacing: 8%;
+}
+
+.header .nav .inner li a:hover {
+  background: linear-gradient(90deg, #51a2ff 0%, #ad46ff 80%);
+  border: 0.1rem solid #010101;
+}
+.header .mb-nav {
+  display: none;
+}
+/* hero-section */
+.hero-section {
+  position: relative;
+  width: 100%;
+}
+.hero-section .inner {
+  padding: 0 2rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.hero-section .inner span {
+  font-size: 14rem;
+  font-family: "Paperlogy-B";
+}
+.hero-section .inner .bounce {
+  display: flex;
+  gap: 2rem;
+}
+.hero-section .inner .bounce span {
+  display: inline-block;
+  will-change: transform;
+  transform-origin: center bottom;
+  animation-delay: calc(var(--i) * 0.12s);
+  /* animation: waveBounce 1.2s ease-in-out infinite; */
+  animation: waveBounce 1.2s ease-in-out 2;
+}
+@keyframes waveBounce {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+  20% {
+    transform: translateY(calc(2rem * -1)) scale(1.08);
+  }
+  40% {
+    transform: translateY(0) scale(1);
+  }
+  60% {
+    transform: translateY(calc(2rem * -0.22)) scale(1.02);
+  }
+  80% {
+    transform: translateY(0) scale(1);
+  }
+}
+
+.hero-section .inner .hero-linear {
+  display: grid;
+  overflow: hidden;
+}
+.hero-section .inner .linear-font {
+  grid-area: 1 / 1;
+  display: flex;
+}
+.hero-section .inner .linear-font span {
+  display: inline-block;
+  font-size: 20rem;
+  font-family: "SB-Aggro-B";
+  background: linear-gradient(90deg, #51a2ff 0%, #ad46ff 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/* ===== PUBLISHER ===== */
+.hero-section .inner .linear-font:nth-child(1) span {
+  animation: textUp1 6s infinite;
+  animation-delay: calc(var(--i) * 0.07s);
+}
+/* ===== DESIGNER ===== */
+.hero-section .inner .linear-font:nth-child(2) span {
+  animation: textUp2 6s infinite;
+  animation-delay: calc(var(--i) * 0.05s);
+}
+/* 키프레임 */
+@keyframes textUp1 {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  10% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+
+  35% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+
+  45% {
+    transform: translateY(-120%);
+    opacity: 0;
+  }
+
+  /* 🔥 나머지 시간은 완전히 숨김 */
+  100% {
+    transform: translateY(-120%);
+    opacity: 0;
+  }
+}
+@keyframes textUp2 {
+  /* 🔥 초반엔 숨김 */
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  45% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  /* 등장 */
+  55% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+
+  80% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+
+  /* 퇴장 */
+  90% {
+    transform: translateY(-120%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(-120%);
+    opacity: 0;
+  }
+}
+
+.hero-section .inner .bt {
+  text-align: right;
+}
+
+/* introduce-section */
+.introduce-section {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.introduce-section .inner {
+  padding: 30rem 2rem 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.introduce-section .it-me {
+  display: flex;
+  align-items: flex-start;
+  font-family: "Paperlogy-M";
+  font-size: 3.2rem;
+  margin-bottom: 3.2rem;
+}
+.introduce-section .caption {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.8;
+  font-family: "Paperlogy-B";
+}
+
+.introduce-section .s-box {
+  font-size: 4rem;
+  background: linear-gradient(120deg, #fff 60%, #555 40%);
+  background-size: 300% 300%;
+  background-position: 100% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.introduce-section .s-box strong {
+  white-space: nowrap;
+  -webkit-text-fill-color: #51a2ff;
+  font-family: "Paperlogy-EB";
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    box-shadow:
+      0 0 5px rgba(81, 162, 255, 0.3),
+      0 0 10px rgba(173, 70, 255, 0.2);
+  }
+  50% {
+    box-shadow:
+      0 0 10px rgba(81, 162, 255, 0.6),
+      0 0 20px rgba(173, 70, 255, 0.4);
+  }
+}
+
+/* profile-section */
+.profile-section {
+  position: relative;
+  height: 100%;
+  background: url(../assets/images/section-bg.png) no-repeat bottom / 100%;
+  background-color: #000;
+  /* color: #000; */
+}
+.profile-section .inner {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+  padding: 20rem 2rem;
+}
+.profile-section .title {
+  font-size: 7.2rem;
+  font-family: "SB-Aggro-B";
+}
+.profile-section .title span {
+  color: #51a2ff;
+}
+.profile-section .mb-respons-btn {
+  display: none;
+}
+.profile-section .info-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+.profile-section .info-wrap .info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 0 0.8rem;
+  gap: 2rem;
+}
+.profile-section .info-wrap .info .tit {
+  font-size: 2.8rem;
+  font-family: "Paperlogy-B";
+  margin-bottom: 0.4rem;
+  border-bottom: 0.1rem solid #ad46ff;
+}
+.profile-section .info-wrap .info .desc {
+  margin-top: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.profile-section .info-wrap .info .desc span {
+  font-size: 2.4rem;
+  font-family: "Paperlogy-B";
+  line-height: 1.2;
+}
+.profile-section .info-wrap .info .desc .edu-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+.profile-section .info-wrap .info .desc .edu-wrap p {
+  font-size: 1.6rem;
+  font-weight: medium;
+}
+/*  */
+
+/* publisher-section */
+.publisher-section {
+  position: relative;
+  width: 100%;
+  /* background: url(../assets/images/section-bg.png) no-repeat bottom / 100%; */
+  /* background-color: #000; */
+}
+.publisher-section .inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 20rem 2rem;
+}
+.publisher-section .title,
+.app-section .title,
+.branding-section .title,
+.detail-section .title,
+.cardnews-section .title {
+  width: 100%;
+  background: linear-gradient(90deg, #51a2ff 0%, #ad46ff 20%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 6rem;
+  font-family: "SB-Aggro-B";
+  letter-spacing: 4%;
+}
+.publisher-wrap * {
+  /* transform: scaleX(-1); */
+}
+.publisher-wrap {
+  margin-top: 7.2rem;
+  padding: 0 5rem;
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  height: 60rem;
+  gap: 3.2rem;
+  justify-content: space-between;
+  overflow-y: auto;
+  /* transform: scaleX(-1); */
+}
+.publisher-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2rem;
+  overflow: hidden;
+  border: 1px solid #fff;
+  width: 38.5rem;
+  height: 44.8rem;
+  background-color: rgba(64, 64, 64, 0.3);
+}
+.publisher-card .num-card {
+  width: 18.7rem;
+  height: 20rem;
+  /* transform: scaleX(-1); */
+}
+.publisher-card .num-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  animation: floatBounce 2s ease-in-out infinite;
+}
+@keyframes floatBounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-12px);
+  }
+  60% {
+    transform: translateY(0);
+  }
+  80% {
+    transform: translateY(-4px);
+  }
+}
+.publisher-card .card {
+  display: none;
+}
+.publisher-card:hover .num-card {
+  display: none;
+}
+.publisher-card:hover .card {
+  display: flex;
+  flex-direction: column;
+  /* transform: scaleX(1); */
+}
+.publisher-card .card .card-img {
+  width: 38.5rem;
+  height: 29rem;
+}
+.publisher-card .card .card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.publisher-card .card .card-info {
+  padding: 0.4rem 1.6rem 1.2rem 1.6rem;
+}
+.publisher-card .card .card-info .top {
+  padding: 0.4rem 0;
+  font-family: "Paperlogy-M";
+  font-size: 2rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+.publisher-card .card .card-info .tit {
+  font-size: 3.6rem;
+  font-family: "Paperlogy-B";
+}
+.publisher-card .card .card-info .contr {
+  /* transform: scaleX(1); */
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #949494;
+  font-size: 2rem;
+}
+.publisher-card .card .card-info .date {
+  font-family: "Paperlogy-M";
+}
+
+/*  */
+
+/* appbranding-section */
+.app-section {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  /* background: url(../assets/images/section-bg.png) no-repeat bottom / 100%; */
+  /* background-color: #000; */
+}
+.app-section .inner {
+  display: flex;
+  flex-direction: column;
+  padding: 20rem 2rem;
+}
+
+.app-wrap {
+  padding: 7.2rem 10rem 0 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.app-img {
+  position: relative;
+  width: 600px;
+  height: 900px;
+  overflow: hidden;
+}
+
+.app-img img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0;
+  animation: app-fade ease-in-out infinite;
+  will-change: opacity;
+  transform: translateZ(0);
+}
+
+/* hover 시 정지 */
+.app-img:hover img {
+  animation-play-state: paused;
+  filter: brightness(0.7);
+}
+
+@keyframes app-fade {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.app-wrap .wrap-info,
+.branding-wrap .wrap-info {
+  width: 100%;
+  padding: 0 8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.app-wrap .wrap-info .top,
+.branding-wrap .wrap-info .top {
+  margin-bottom: 4rem;
+  font-family: "Paperlogy-M";
+  font-size: 2.8rem;
+}
+.app-wrap .wrap-info .tit,
+.branding-wrap .wrap-info .tit {
+  font-family: "SB-Aggro-B";
+  font-size: 7.2rem;
+  color: #ccff00;
+  white-space: nowrap;
+}
+.app-wrap .wrap-info .contr,
+.branding-wrap .wrap-info .contr {
+  margin-top: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  font-size: 2.4rem;
+  font-family: "Paperlogy-B";
+  color: #949494;
+}
+.app-wrap .wrap-info .date,
+.branding-wrap .wrap-info .date {
+  font-family: "Paperlogy-B";
+  font-size: 2rem;
+  white-space: nowrap;
+}
+.app-wrap .wrap-info .cta,
+.branding-wrap .wrap-info .cta {
+  display: flex;
+  gap: 1.2rem;
+  margin-top: 2rem;
+}
+.app-wrap .wrap-info .cta a,
+.branding-wrap .wrap-info .cta a {
+  width: 20rem;
+  padding: 1.2rem 0;
+  text-align: center;
+  border-radius: 4rem;
+  border: 1px solid #fff;
+}
+.app-wrap .wrap-info .cta a .btn,
+.branding-wrap .wrap-info .cta a .btn {
+  font-size: 2rem;
+  font-family: "Paperlogy-M";
+}
+.app-wrap .wrap-info .cta a:hover,
+.branding-wrap .wrap-info .cta a:hover {
+  background-color: #fff;
+}
+.app-wrap .wrap-info .cta a:hover .btn,
+.branding-wrap .wrap-info .cta a:hover .btn {
+  color: #000;
+}
+/*  */
+/*  */
+/* branding-section */
+.branding-section {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  /* background: url(../assets/images/section-bg.png) no-repeat bottom / 100%; */
+  /* background-color: #000; */
+}
+.branding-section .inner {
+  display: flex;
+  flex-direction: column;
+  padding: 20rem 2rem;
+}
+
+.branding-wrap {
+  padding: 7.2rem 0 0 10rem;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.branding-img {
+  position: relative;
+  width: 100%;
+  height: 412px;
+}
+.branding-img img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0;
+  /* CSS만으로는 nth-child 반복 피하기 힘듦 */
+  /* CSS 변수 + calc = 베스트 솔루션 */
+  animation: branding-fade 12s ease-in-out infinite;
+  will-change: opacity;
+  transform: translateZ(0);
+}
+.branding-img:hover img {
+  animation-play-state: paused;
+  filter: brightness(0.7);
+}
+@keyframes branding-fade {
+  0% {
+    opacity: 0;
+  }
+
+  8% {
+    opacity: 1;
+  } /* 등장 (약 0.6초) */
+  30% {
+    opacity: 1;
+  } /* 유지 (약 3초) */
+
+  38% {
+    opacity: 0;
+  } /* 사라짐 */
+
+  100% {
+    opacity: 0;
+  }
+}
+.branding-wrap .wrap-info {
+  align-items: flex-end;
+}
+
+.branding-wrap .wrap-info .tit {
+  color: #eee8d8;
+}
+.branding-wrap .wrap-info .contr,
+.branding-wrap .wrap-info .cta {
+  display: flex;
+}
+
+/* detail-section */
+.detail-section {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  /* background: url(../assets/images/section-bg.png) no-repeat bottom / 100%; */
+  /* background-color: #000; */
+}
+.detail-section .inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20rem 2rem;
+}
+.detail-wrap {
+  margin-top: 7.2rem;
+  height: 100%;
+  width: 100%;
+  max-width: 128rem;
+  display: flex;
+  justify-content: space-between;
+}
+.detail-wrap .detail-info {
+  display: flex;
+  flex-direction: column;
+}
+.detail-wrap .detail-info .detail-img {
+  width: 50rem;
+  height: 35rem;
+}
+.detail-wrap .detail-info .detail-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 2rem;
+  object-fit: cover;
+}
+.detail-wrap .detail-info .info-desc {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.4em;
+  margin: 1.6rem 1.2rem 0 1.2rem;
+}
+.detail-wrap .detail-info .info-desc .caption {
+  font-size: 2rem;
+  font-family: "Paperlogy-B";
+}
+.detail-wrap .detail-info .info-desc a {
+  border-radius: 4rem;
+  padding: 0 1.6rem;
+
+  text-align: center;
+  border: 1px solid #fff;
+}
+.detail-wrap .detail-info .info-desc a .btn {
+  font-size: 1.6rem;
+}
+.detail-wrap .detail-info .info-desc a:hover {
+  background-color: #fff;
+}
+.detail-wrap .detail-info .info-desc a:hover .btn {
+  color: #000;
+}
+
+.popupbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+}
+.popupbox.active {
+  display: block;
+}
+.detail-section .popup {
+  position: absolute;
+  top: 20rem;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  transform: translateX(-50%);
+  overflow-y: scroll;
+}
+.detail-section .popup img {
+  width: 100%;
+}
+
+/*  */
+
+/* cardnews-section */
+.cardnews-section {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  /* background: url(../assets/images/section-bg.png) no-repeat bottom / 100%; */
+  /* background-color: #000; */
+}
+.cardnews-section .inner {
+  display: flex;
+  flex-direction: column;
+  padding: 20rem 2rem;
+}
+
+.news-wrap {
+  margin-top: 7.2rem;
+  display: flex;
+  gap: 4rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.news-wrap .news-img {
+  width: 32.5rem;
+}
+.news-wrap .news-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 2rem;
+  object-fit: cover;
+}
+
+.news-popupbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+}
+.news-popupbox.active {
+  display: block;
+}
+.cardnews-section .popup {
+  position: absolute;
+  top: 20rem;
+  left: 50%;
+  width: 50%;
+  transform: translateX(-50%);
+}
+.cardnews-section .popup img {
+  width: 100%;
+}
+
+/*  */
+
+/*  */
+.footer {
+  position: relative;
+  /* background: url(../assets/images/section-bg.png) no-repeat bottom / 100%; */
+  /* background-color: #000; */
+}
+.footer .inner {
+  padding: 24rem 2rem;
+}
+.footer .ending {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.footer .ending .title {
+  background: linear-gradient(90deg, #51a2ff 40%, #ad46ff 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 6rem;
+  font-family: "SB-Aggro-B";
+}
+.footer .ending span {
+  font-size: 3.2rem;
+  font-family: "Paperlogy-M";
+}
+.footer .footer-wrap {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-top: 7.2rem;
+}
+.footer .footer-wrap i {
+  font-size: 6.8rem;
+  color: #fff;
+}
+/*  */
+@media (max-width: 1600px) {
+  html {
+    font-size: 56.25%; /* 9px */
+  }
+  .hero-section .inner .linear-font span {
+    font-size: 18rem;
+  }
+}
+@media (max-width: 1024px) {
+  .header .nav {
+    display: none;
+  }
+  /* mb-nav */
+  .header .mb-nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(1, 1, 1, 1);
+  }
+  .header .mb-nav .inner {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.6rem 2rem;
+  }
+  .header .mb-menu i {
+    color: #fff;
+    font-size: 3rem;
+  }
+  .header .mb-menu.active i {
+    background: linear-gradient(90deg, #51a2ff 0%, #ad46ff 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .header .mb-menu .mb-drobdown {
+    display: none;
+  }
+  .header .mb-menu.active .mb-drobdown {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    font-family: "Paperlogy-B";
+    background-color: rgba(1, 1, 1, 1);
+  }
+  .header .mb-menu.active .mb-drobdown li {
+    padding: 0.8rem;
+  }
+  .hero-section .inner span {
+    font-size: 11.2rem;
+  }
+  .hero-section .inner .linear-font span {
+    font-size: 14rem;
+  }
+  .introduce-section .inner {
+    width: 100%;
+  }
+  .introduce-section .it-me {
+    font-size: 2.8rem;
+  }
+  .introduce-section .s-box {
+    font-size: 3.2rem;
+  }
+
+  .profile-section {
+    height: 90rem;
+  }
+  .profile-section .title {
+    display: flex;
+    gap: 1.2rem;
+  }
+  .profile-section .mb-respons-btn {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 4rem;
+    gap: 2rem;
+  }
+  .profile-section .mb-respons-btn .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #fff;
+    padding: 0.8rem 1.6rem;
+    border-radius: 999rem;
+    font-family: "Paperlogy-B";
+    font-size: 2.4rem;
+  }
+  .profile-section .mb-respons-btn .btn.show {
+    background: linear-gradient(90deg, #51a2ff 0%, #ad46ff 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .profile-section .info-wrap .info {
+    display: none;
+  }
+  .profile-section .info-wrap .info.show {
+    display: block;
+  }
+  .profile-section .info-wrap .info .tit {
+    width: 20%;
+  }
+  .publisher-wrap {
+    width: 75%;
+  }
+  .app-img {
+    height: 600px;
+  }
+
+  .app-wrap .wrap-info .top,
+  .branding-wrap .wrap-info .top {
+    margin-bottom: 0.6rem;
+    font-family: "Paperlogy-M";
+    font-size: 2rem;
+  }
+  .app-wrap .wrap-info .tit,
+  .branding-wrap .wrap-info .tit {
+    font-size: 4.8rem;
+  }
+  .app-wrap .wrap-info .contr,
+  .branding-wrap .wrap-info .contr {
+    margin-top: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    font-size: 2rem;
+    font-family: "Paperlogy-B";
+    color: #949494;
+  }
+  .app-wrap .wrap-info .cta,
+  .branding-wrap .wrap-info .cta {
+    flex-direction: column;
+  }
+  .detail-wrap {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4.2rem;
+  }
+  .detail-wrap .detail-info {
+    width: 40rem;
+  }
+  .detail-wrap .detail-info .detail-img {
+    width: 40rem;
+    height: 100%;
+  }
+  .footer .ending .title {
+    font-size: 5.6rem;
+  }
+  .footer .ending span {
+    font-size: 2.8rem;
+  }
+  .footer .footer-wrap {
+    gap: 1.2rem;
+  }
+  .footer .footer-wrap i {
+    font-size: 5.2rem;
+  }
+}
+@media (max-width: 985px) {
+  .hero-section .inner span {
+    font-size: 10.5rem;
+  }
+  .hero-section .inner .linear-font span {
+    font-size: 12rem;
+  }
+  .news-wrap {
+    align-items: center;
+    justify-content: center;
+  }
+  .footer .ending .title {
+    font-size: 4.8rem;
+  }
+  .footer .ending span {
+    font-size: 2.4rem;
+  }
+  .footer .footer-wrap {
+    gap: 1.2rem;
+  }
+  .footer .footer-wrap i {
+    font-size: 4.8rem;
+  }
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 50%; /* 8px */
+  }
+  .hero-section .inner span {
+    font-size: 7.2rem;
+  }
+  .hero-section .inner .linear-font span {
+    font-size: 8.4rem;
+  }
+  .introduce-section .it-me {
+    font-size: 1.6rem;
+  }
+  .introduce-section .s-box {
+    font-size: 2rem;
+  }
+  .profile-section .mb-respons-btn .btn {
+    font-size: 2rem;
+  }
+  .profile-section .title {
+    font-size: 5.2rem;
+  }
+
+  .app-wrap .wrap-info .top,
+  .branding-wrap .wrap-info .top {
+    font-size: 1.6rem;
+  }
+  .app-wrap .wrap-info .tit,
+  .branding-wrap .wrap-info .tit {
+    font-size: 4rem;
+  }
+  .app-wrap .wrap-info .contr,
+  .branding-wrap .wrap-info .contr {
+    font-size: 1.6rem;
+  }
+  .app-wrap .wrap-info .date,
+  .branding-wrap .wrap-info .date {
+    font-size: 1.6rem;
+  }
+  .app-wrap .wrap-info .cta a,
+  .branding-wrap .wrap-info .cta a {
+    padding: 0.8rem 0;
+  }
+  .app-wrap .wrap-info .cta a .btn,
+  .branding-wrap .wrap-info .cta a .btn {
+    font-size: 1.6rem;
+  }
+
+  .app-img {
+    height: 520px;
+  }
+}
+@media (max-width: 480px) {
+  html {
+    font-size: 43.75%; /* 7px */
+  }
+  .header .top .inner .center {
+    display: none;
+  }
+  .app-wrap {
+    flex-direction: column;
+    gap: 3.2rem;
+  }
+  .app-wrap .wrap-info {
+  }
+  .app-img {
+    width: 100%;
+  }
+  .branding-wrap {
+    flex-direction: column;
+    align-items: center;
+    gap: 3.2rem;
+  }
+  .branding-wrap .wrap-info {
+    order: 2;
+  }
+  .branding-img {
+    height: 200px;
+  }
+}
+
+/* .publisher-card .num-img {
+  width: 18.7rem;
+  height: 20rem;
+}
+.publisher-card .num-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  animation: floatBounce 2s ease-in-out infinite;
+}
+@keyframes floatBounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-12px);
+  }
+  60% {
+    transform: translateY(0);
+  }
+  80% {
+    transform: translateY(-4px);
+  }
+}
+.publisher-card .card {
+  display: block;
+}
+ .publisher-card:hover .num-img {
+  display: none;
+}
+.publisher-card:hover .card {
+  display: block;
+}  */
