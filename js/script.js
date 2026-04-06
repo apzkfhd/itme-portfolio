@@ -34,6 +34,90 @@ window.addEventListener("scroll", () => {
   });
 });
 
+// publisher
+// 데이터
+const publisherList = [
+  {
+    numImg: "assets/images/publisher-1.png",
+    link: "https://apzkfhd.github.io/first-project/",
+    img: "assets/images/publisher-project-1.png",
+    top: "웹 사이트 리디자인",
+    title: "여기어때 컴퍼니",
+    type: "팀 프로젝트",
+    icon: "fa-users",
+    date: "2025.12.23. ~ 2026.01.21.",
+  },
+  {
+    numImg: "assets/images/publisher-2.png",
+    link: "https://apzkfhd.github.io/service-platform-project/",
+    img: "assets/images/publisher-project-2.png",
+    top: "서비스 플랫폼 웹 사이트 제작",
+    title: "고가바",
+    type: "팀 프로젝트",
+    icon: "fa-users",
+    date: "2026.02.13. ~ 2026.03.19.",
+  },
+  {
+    numImg: "assets/images/publisher-3.png",
+    link: "https://apzkfhd.github.io/open-clone/",
+    img: "assets/images/publisher-project-3.png",
+    top: "클론코딩",
+    title: "오펜(OPEN)",
+    type: "개인 프로젝트",
+    icon: "fa-user",
+    date: "2026.03.23. ~ 2026.03.29.",
+  },
+  {
+    numImg: "assets/images/publisher-4.png",
+    link: "#",
+    img: "assets/images/publisher-project-4.png",
+    top: "클론코딩ㆍ리디자인",
+    title: "대한민국 구석구석",
+    type: "개인 프로젝트",
+    icon: "fa-user",
+    date: "2026.03.23. ~ 2026.04.??.",
+  },
+];
+
+// DOM 로드 후 실행 (중요)
+document.addEventListener("DOMContentLoaded", () => {
+  const publisherWrap = document.querySelector(".publisher-wrap");
+
+  let publisherTag = "";
+
+  publisherList.forEach((item) => {
+    publisherTag += `
+      <div class="publisher-card">
+        <div class="num-card">
+          <img src="${item.numImg}" alt="num-card" />
+        </div>
+
+        <div class="card">
+          <a href="${item.link}">
+            <div class="card-img">
+              <img src="${item.img}" alt="project" />
+            </div>
+
+            <div class="card-info">
+              <div class="top">${item.top}</div>
+              <div class="tit">${item.title}</div>
+
+              <div class="contr">
+                <p>${item.type}</p>
+                <i class="fa-solid ${item.icon}"></i>
+              </div>
+
+              <div class="date">${item.date}</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    `;
+  });
+
+  publisherWrap.innerHTML = publisherTag;
+});
+
 // show 효과
 const sections = document.querySelectorAll("section");
 const observer = new IntersectionObserver(
