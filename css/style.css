@@ -1130,9 +1130,6 @@ section.show .branding-img {
   .profile-section .info-wrap .info .tit {
     width: 20%;
   }
-  .publisher-wrap {
-    width: 75%;
-  }
   .app-img {
     height: 600px;
   }
@@ -1285,6 +1282,9 @@ section.show .branding-img {
     font-size: 4rem;
   }
 
+  .publisher-wrap {
+    width: 100%;
+  }
   .publisher-card {
     width: 240px !important;
   }
