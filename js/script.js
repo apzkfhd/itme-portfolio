@@ -69,7 +69,7 @@ const publisherList = [
   },
   {
     numImg: "assets/images/publisher-4.png",
-    link: "https://apzkfhd.github.io/korea-gsuck-clone/g",
+    link: "https://apzkfhd.github.io/korea-gsuck-clone/",
     img: "assets/images/publisher-project-4.png",
     top: "클론코딩ㆍ리디자인",
     title: "대한민국 구석구석",
