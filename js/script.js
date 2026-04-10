@@ -201,15 +201,17 @@ const popups = document.querySelectorAll(".popupbox");
 
 detailImgs.forEach((img, index) => {
   img.addEventListener("click", () => {
-    // document.body.style.overflow = "hidden";
     popups[index].classList.add("active");
+    document.body.style.overflow = "hidden";
+    document.documentElement.style.overflow = "hidden";
   });
 });
 
 popups.forEach((popup) => {
   popup.addEventListener("click", () => {
-    // document.body.style.overflow = "auto";
     popup.classList.remove("active");
+    document.body.style.overflow = "";
+    document.documentElement.style.overflow = "";
   });
 });
 
