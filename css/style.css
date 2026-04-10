@@ -973,6 +973,7 @@ section.show .branding-img {
   top: 0;
   left: 0;
   width: 100%;
+  height: 100%;
   z-index: 9999;
 }
 .news-popupbox.active {
@@ -982,7 +983,8 @@ section.show .branding-img {
   position: absolute;
   top: 20rem;
   left: 50%;
-  width: 50%;
+  width: 700px;
+  height: 700px;
   transform: translateX(-50%);
 }
 .cardnews-section .popup img {

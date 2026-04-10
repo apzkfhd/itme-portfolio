@@ -253,14 +253,14 @@ const newsPopups = document.querySelectorAll(".news-popupbox");
 
 newsImgs.forEach((newsImgs, index) => {
   newsImgs.addEventListener("click", () => {
-    // document.body.style.overflow = "hidden";
+    document.body.style.overflow = "hidden";
     newsPopups[index].classList.add("active");
   });
 });
 
 newsPopups.forEach((newsPopup) => {
   newsPopup.addEventListener("click", () => {
-    // document.body.style.overflow = "auto";
+    document.body.style.overflow = "auto";
     newsPopup.classList.remove("active");
   });
 });
