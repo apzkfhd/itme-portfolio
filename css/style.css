@@ -390,7 +390,7 @@ section.show .branding-img {
 
 .introduce-section .s-box {
   font-size: 4rem;
-  background: linear-gradient(120deg, #fff 60%, #555 40%);
+  background: linear-gradient(120deg, #fff 85%, #555 15%);
   background-size: 300% 300%;
   background-position: 100% 100%;
   -webkit-background-clip: text;
