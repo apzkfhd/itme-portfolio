@@ -93,8 +93,8 @@ const publisherList = [
     img: "assets/images/publisher-project-6.png",
     top: "스터디",
     title: "멜론 랜딩 페이지",
-    type: "스터디",
-    icon: "fa-users",
+    type: "개인 프로젝트",
+    icon: "fa-user",
     date: "2026.04.10. ~ 2026.04.??.",
   },
 ];
