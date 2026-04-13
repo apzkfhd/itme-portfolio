@@ -75,7 +75,7 @@ const publisherList = [
     title: "대한민국 구석구석",
     type: "개인 프로젝트",
     icon: "fa-user",
-    date: "2026.03.23. ~ 2026.04.??.",
+    date: "2026.03.23. ~ 2026.04.12.",
   },
   {
     numImg: "assets/images/publisher-5.png",
@@ -86,6 +86,16 @@ const publisherList = [
     type: "스터디",
     icon: "fa-users",
     date: "2026.01.28. ~ 2026.02.11.",
+  },
+  {
+    numImg: "assets/images/publisher-6.png",
+    link: "",
+    img: "assets/images/publisher-project-6.png",
+    top: "스터디",
+    title: "멜론 랜딩 페이지",
+    type: "스터디",
+    icon: "fa-users",
+    date: "2026.04.10. ~ 2026.04.??.",
   },
 ];
 
