@@ -95,7 +95,7 @@ const publisherList = [
     title: "멜론 랜딩 페이지",
     type: "개인 프로젝트",
     icon: "fa-user",
-    date: "2026.04.10. ~ 2026.04.??.",
+    date: "2026.04.10. ~ 2026.04.15.",
   },
 ];
 
