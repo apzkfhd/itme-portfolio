@@ -89,7 +89,7 @@ const publisherList = [
   },
   {
     numImg: "assets/images/publisher-6.png",
-    link: "",
+    link: "https://apzkfhd.github.io/melon-randingPage/",
     img: "assets/images/publisher-project-6.png",
     top: "스터디",
     title: "멜론 랜딩 페이지",
